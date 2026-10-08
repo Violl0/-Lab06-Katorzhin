@@ -18,19 +18,39 @@
 //     Console.WriteLine("{0}", i);
 // }
 
-int a = 0;
-int b = 0;
-int i;
-for (i = 1; i <= 100; i++)
-{
-    if (i % 3 == 0)
+// int a = 0;
+// int b = 0;
+// int i;
+// for (i = 1; i <= 100; i++)
+// {
+//     if (i % 3 == 0)
+//     {
+//         a = a + i;
+//     }
+//     if (i % 7 == 0)
+//     {
+//         b = b + 1;
+//     }
+// }
+// Console.WriteLine("{0}", a);
+// Console.WriteLine("{0}", b);
+
+
+
+int number = Convert.ToInt32(Console.ReadLine());
+int totaln = 0;
+int totalP = 0;
+
+while (number != 0) {
+    if (number < 0)
     {
-        a = a + i;
+        totaln += 1;
     }
-    if (i % 7 == 0)
+    if (number > 0)
     {
-        b = b + 1;
+        totalP += 1;
     }
+    number = Convert.ToInt32(Console.ReadLine());
 }
-Console.WriteLine("{0}", a);
-Console.WriteLine("{0}", b);
+
+Console.WriteLine($"Отрицательные: {totaln}, Положительные: {totalP}");
