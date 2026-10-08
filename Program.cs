@@ -87,17 +87,41 @@
 
 
 
-for (int i = 1; i <= 30; i++)
+// for (int i = 1; i <= 30; i++)
+// {
+//     if (i % 10 == 0 && i > 20)
+//     {
+//         break;
+//     }
+
+//     if (i % 3 == 0)
+//     {
+//         continue;
+//     }
+//     Console.WriteLine(i);
+// }
+
+
+
+
+
+int secret = 42;
+int attempts = 0;
+for (int i = 0; i < 5; i++)
 {
-    if (i % 10 == 0 && i > 20)
-    {
+    Console.WriteLine("Введите число: ");
+    int a = int.Parse(Console.ReadLine());
+    if (a != secret){
+        attempts++;
+        if (a < secret){
+            Console.WriteLine("больше");
+        }
+        else{
+            Console.WriteLine("меньше");
+        }
+    }
+    if (a == secret){
+        Console.WriteLine("Угадал");
         break;
     }
-
-    if (i % 3 == 0)
-    {
-        continue;
-    }
-
-    Console.WriteLine(i);
 }
