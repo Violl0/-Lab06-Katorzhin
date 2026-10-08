@@ -37,20 +37,40 @@
 
 
 
-int number = Convert.ToInt32(Console.ReadLine());
-int totaln = 0;
-int totalP = 0;
+// int number = Convert.ToInt32(Console.ReadLine());
+// int totaln = 0;
+// int totalP = 0;
 
-while (number != 0) {
-    if (number < 0)
+// while (number != 0) {
+//     if (number < 0)
+//     {
+//         totaln += 1;
+//     }
+//     if (number > 0)
+//     {
+//         totalP += 1;
+//     }
+//     number = Convert.ToInt32(Console.ReadLine());
+// }
+
+// Console.WriteLine($"Отрицательные: {totaln}, Положительные: {totalP}");
+
+
+
+
+string pass = "qwerty123";
+int c = 0;
+while (c < 3)
+{
+    Console.WriteLine("Введите пароль ");
+    string input = Console.ReadLine();
+    if (pass != input)
     {
-        totaln += 1;
+        c++;
     }
-    if (number > 0)
+    if (pass == input)
     {
-        totalP += 1;
+        Console.WriteLine("ура");
+        break;
     }
-    number = Convert.ToInt32(Console.ReadLine());
 }
-
-Console.WriteLine($"Отрицательные: {totaln}, Положительные: {totalP}");
