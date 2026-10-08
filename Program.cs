@@ -105,23 +105,37 @@
 
 
 
-int secret = 42;
-int attempts = 0;
-for (int i = 0; i < 5; i++)
+// int secret = 42;
+// int attempts = 0;
+// for (int i = 0; i < 5; i++)
+// {
+//     Console.WriteLine("Введите число: ");
+//     int a = int.Parse(Console.ReadLine());
+//     if (a != secret){
+//         attempts++;
+//         if (a < secret){
+//             Console.WriteLine("больше");
+//         }
+//         else{
+//             Console.WriteLine("меньше");
+//         }
+//     }
+//     if (a == secret){
+//         Console.WriteLine("Угадал");
+//         break;
+//     }
+// }
+
+
+
+
+int a = int.Parse(Console.ReadLine());
+int i = 0;
+int n = 1;
+while (n > 0)
 {
-    Console.WriteLine("Введите число: ");
-    int a = int.Parse(Console.ReadLine());
-    if (a != secret){
-        attempts++;
-        if (a < secret){
-            Console.WriteLine("больше");
-        }
-        else{
-            Console.WriteLine("меньше");
-        }
-    }
-    if (a == secret){
-        Console.WriteLine("Угадал");
-        break;
-    }
+    n = a % 10;
+    a = a / 10;
+    i = i + n;
 }
+Console.WriteLine("{0}", i);
