@@ -9,7 +9,7 @@
 
 
 int i;
-for (i = 10; i >= 1; i--){
+for (i = 2; i <= 50; i+=2){
     Console.WriteLine("{0}", i);
 }
 
